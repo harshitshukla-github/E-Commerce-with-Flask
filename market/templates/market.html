@@ -11,7 +11,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Barcode</th>
-                <th scope="col">Price(IN USD)</th>
+                <th scope="col">Price(IN INR)</th>
                 <th scope="col">Options</th>
             </tr>
         </thead>
@@ -22,7 +22,7 @@
                     <td>{{ item.id }}</td>
                     <td>{{ item.name }}</td>
                     <td>{{ item.barcode }}</td>
-                    <td>${{ item.price }}</td>
+                    <td>{{ item.price }}</td>
                     <td>
                         <button class="btn btn-outline btn-info">More Info</button>
                         <button class="btn btn-outline btn-success">Purchase this Item</button>
