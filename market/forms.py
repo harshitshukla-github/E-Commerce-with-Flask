@@ -1,7 +1,5 @@
-import re
 from flask_wtf import FlaskForm
-from flask_wtf.recaptcha import validators
-from wtforms import StringField, PasswordField, SubmitField
+from wtforms import StringField, PasswordField, SubmitField, HiddenField
 from wtforms.validators import DataRequired, Email, Length, EqualTo, ValidationError
 from market.models import User
 
@@ -27,3 +25,9 @@ class LoginForm(FlaskForm):
   username = StringField(label= 'User name:', validators = [DataRequired()])
   password = PasswordField(label= 'Password:', validators = [DataRequired()])
   submit = SubmitField(label='Sign In')
+
+class PurchaseItemForm(FlaskForm):
+  submit = SubmitField(label= 'Purchase Item!')
+
+class SellItemForm(FlaskForm):
+  submit = SubmitField(label= 'Sell Item!')
